@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Mon pendu</title>
+    <meta name="Jeu du Pendu" content="
+    Jouez au jeu du Pendu en ligne ! Devinez les mots cachés et améliorez votre vocabulaire. Un jeu classique, amusant et éducatif pour tous les âges.">
+</head>
+<body>
+
+    <div id="easterEgg">
+        <span id="streak"></span>
+        <img id="easter" src=""> <!-- Balise img dont la source sera fourni a la completion de l'easter egg -->
+    </div>
+
+    <div class="Mode">
+        <button id="DarkMode" onclick="darkMode()" class="">Dark Mode</button>
+    </div> 
+
+    <div id="top">
+        <h1 id="titre" class="">Jeu du bec Bunsen</h1>
+        <button onclick="restart()">Restart</button>
+    </div>
+
+    
+    <div id="container">
+        <!-- affichage des img pendu -->
+        <img id="pendu" src="media/0.png" alt="#">
+        <span id="trouve" class=""></span>
+        <span id="affichage"></span>
+        <!-- affichage Mot secret -->
+    </div>
+    
+    <!-- Affichage liste de mes lettres -->
+    <section class="listealph">
+        <button onclick="lettreTest(this)" class="off" id="btn1">A</button>
+        <button onclick="lettreTest(this)" class="off" id="btn2">B</button>
+        <button onclick="lettreTest(this)" class="off" id="btn3">C</button>
+        <button onclick="lettreTest(this)" class="off" id="btn4">D</button>
+        <button onclick="lettreTest(this)" class="off" id="btn5">E</button>
+        <button onclick="lettreTest(this)" class="off" id="btn6">F</button>
+        <button onclick="lettreTest(this)" class="off" id="btn7">G</button>
+        <button onclick="lettreTest(this)" class="off" id="btn8">H</button>
+        <button onclick="lettreTest(this)" class="off" id="btn9">I</button>
+        <button onclick="lettreTest(this)" class="off" id="btn10">J</button>
+        <button onclick="lettreTest(this)" class="off" id="btn11">K</button>
+        <button onclick="lettreTest(this)" class="off" id="btn12">L</button>
+        <button onclick="lettreTest(this)" class="off" id="btn13">M</button>
+        <button onclick="lettreTest(this)" class="off" id="btn14">N</button>
+        <button onclick="lettreTest(this)" class="off" id="btn15">O</button>
+        <button onclick="lettreTest(this)" class="off" id="btn16">P</button>
+        <button onclick="lettreTest(this)" class="off" id="btn17">Q</button>
+        <button onclick="lettreTest(this)" class="off" id="btn18">R</button>
+        <button onclick="lettreTest(this)" class="off" id="btn19">S</button>
+        <button onclick="lettreTest(this)" class="off" id="btn20">T</button>
+        <button onclick="lettreTest(this)" class="off" id="btn21">U</button>
+        <button onclick="lettreTest(this)" class="off" id="btn22">V</button>
+        <button onclick="lettreTest(this)" class="off" id="btn23">W</button>
+        <button onclick="lettreTest(this)" class="off" id="btn24">X</button>
+        <button onclick="lettreTest(this)" class="off" id="btn25">Y</button>
+        <button onclick="lettreTest(this)" class="off" id="btn26">Z</button>
+    </section>
+    <script src="javascript/dictionary.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
