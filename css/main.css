@@ -1,116 +1,332 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-div#top{
+
+/* Div easter egg */
+div#easterEgg {
+    position: absolute;
+    display: flex;
+    top: 90px; 
+    left: 100px;
+    min-height: 15vh;
+    max-height: 15vh;
+    min-width: 15vw;
+    max-width: 15vw;
+    flex-direction: column;
+}
+
+div#easterEgg span {
+    font-size: 36px;
+}
+
+/* Div Mode */
+.Mode {
+    position: absolute;
+    top: 100px; 
+    right: 100px; 
+}
+
+.defaultTheme {
+    font-size: 18px;
+    color: white;
+    background: black;
+    height: 40px;
+}
+
+.white_bg {
+    background: white;
+    color: black;
+    height: 40px;
+    font-size: 18px;
+}
+
+/* Div top */
+div#top {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    h1{
-        margin: auto;
-        margin-top: 1%;
-    }
-    button{
-        margin: auto;
-        margin-block: 2%;
-        width:200px;
-        height:70px;
-        background: linear-gradient(to left top, #c32c71 50%, #b33771 50%);
-        border-style: none;
-        color:#fff;
-        font-size: 23px;
-        letter-spacing: 3px;
-        outline: none;
-        cursor: pointer;
-        position: relative;
-        padding: 0px;
-        overflow: hidden;
-        transition: all .5s;
-        box-shadow: 0px 1px 2px rgba(0,0,0,.2);
-        
-    }
 }
-button:hover{
-    transition: all .5s;
-    transform: rotate(-3deg) scale(1.1);
-    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
-    animation-play-state: paused;
+
+div#top h1 {
+    align-self: center; 
+    margin-top: 1%;
 }
-button{
-    width: 8vw;
+
+div#top button {
+    align-self: center; 
+    margin-block: 2%;
+    background: linear-gradient(to left top, #c32c71 50%, #b33771 50%);
+    border-style: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
+    transition: all 0.5s;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    white-space: nowrap;
 }
-#container{
+
+/* Div container */
+#container {
     height: 54vh;
     width: 50vw;
     margin: auto;
     display: flex;
     flex-direction: column;
-
-        #pendu{
-        margin: auto;
-        }
-
-        #trouve{
-        margin: auto;
-        margin-top:2%;
-        }
-
-    #affichage{
-        height: 20vh;
-        margin:auto ;
-        font-size: 40px;
-        margin-bottom: 20px;
-        }
 }
-span{
-    border-radius: 8px;
-    margin-top: 2%;
-    font-size: 48px;
+
+#pendu {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    text-align: center; 
 }
-.listealph{
+
+#trouve {
+    align-self: center; 
+    font-size: 40px;
+    display: inline-block; 
+}
+
+#affichage {
+    min-height: 20vh; 
+    margin: auto;
+    font-size: 40px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+/* Div ListeAlph */
+.listealph {
     width: 100%;
     margin-top: 5%;
-    button{
-        font-weight: bold;
-    }
-
-}
-div#easterEgg{        
-    position: absolute ;
     display: flex;
-    margin: 90px 0 0 100px ;
-    height: 15vh;
-    width: 15vw;
-    flex-direction: column;
-    span{
-        font-size: 36px;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.Mode{
-    position: absolute;
-    margin: 100px 100px 0 0;
-    right: 0;
-
-    button{
-        font-size: 24px;
-        color: white;
-        background: black;
-        height: 40px;
-    }
-    .white_bg{
-        background: white;
-        color: black;
-    }
+.listealph button {
+    font-weight: bold;
+    margin: 5px;
+    flex: 1 1 auto;
+    min-width: 80px;
+    max-width: 100px;
+    font-size: 24px;
 }
-.button_color{
+
+/* Code commun */
+.bodybg{
+    background-color: #4B4453;
+}
+button:hover {
+    transition: all 0.5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+    animation-play-state: paused;
+}
+
+button {
+    width: 8vw;
+}
+
+.button_color {
     color: wheat;
     background-color: #4B4453;
 }
-.white_mode{
+
+.white_mode {
     color: wheat;
 }
-.black_mode{
+
+.black_mode {
     color: black;
+}
+
+
+/* For screens with min-width of 600px and max-width of 1199px (tablets) */
+@media only screen and (min-width: 851px) and (max-width: 1200px) {
+
+    /* Div easter egg */
+    div#easterEgg {
+        top: 50px; 
+        left: 50px;
+        min-height: 12vh; 
+        max-height: 12vh; 
+        min-width: 30vw; 
+        max-width: 30vw; 
+    }
+
+    div#easterEgg span {
+        font-size: 28px; 
+    }
+
+    /* Div Mode */
+    .Mode {
+        top: 70px; 
+        right: 50px; 
+    }
+
+    .Mode button {
+        font-size: 16px; 
+        height: 35px; 
+    }
+
+    #DarkMode {
+        font-size: 14px; 
+    }
+
+    /* Div top */
+    div#top h1 {
+        margin-top: 5px; 
+    }
+
+    div#top button {
+        font-size: 14px; 
+        padding: 12px; 
+    }
+
+    /* Div container */
+    #container {
+        padding: 20px; 
+    }
+
+    #trouve {
+        font-size: 30px; 
+    }
+
+    #affichage {
+        font-size: 28px; 
+    }
+
+    /* Div ListeAlph */
+    .listealph {
+        margin-top: 80px; 
+    }
+
+    .listealph button {
+        font-size: 16px; 
+        padding: 10px; 
+    }
+
+    /* Code commun */
+    button {
+        width: 10vw; 
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 850px) {
+
+    #affichage {
+        font-size: 24px; 
+    }
+    button {
+        width: 15vw; 
+    }
+}
+
+
+/* Media query pour les écrans jusqu'à 599px de large */
+@media only screen and (max-width: 599px) {
+
+    /* Div easter egg */
+    div#easterEgg {
+        position: absolute;
+        display: flex;
+        top: 20px; 
+        left: 20px;
+        min-height: 10vh; 
+        max-height: 10vh; 
+        min-width: 50vw; 
+        max-width: 50vw; 
+        flex-direction: column;
+    }
+
+    div#easterEgg span {
+        font-size: 24px; 
+    }
+
+    /* Div Mode */
+    .Mode {
+        position: absolute;
+        top: 50px; 
+        right: 20px; 
+    }
+
+    .Mode button {
+        font-size: 18px; 
+        height: 30px; 
+    }
+
+    #DarkMode {
+        font-size: 14px; 
+    }
+
+    /* Div top */
+    div#top {
+        width: 100%;
+    }
+
+    div#top h1 {
+        text-align: center; 
+        margin-top: 10px; 
+    }
+
+    div#top button {
+        align-self: center; 
+        margin: 10px 0; 
+        font-size: 14px; 
+        padding: 10px; 
+    }
+
+    /* Div container */
+    #container {
+        height: auto;
+        width: 100%; 
+        padding: 10px; 
+    }
+    #pendu {
+        max-width: 100%; 
+        height: auto; 
+        display: block; /* Pour éviter l'espace supplémentaire sous l'image */
+        margin: 0 auto; /* Centrer l'image horizontalement */
+        text-align: center; /* Centrage du texte */
+    }
+
+    #trouve {
+        text-align: center; /* Centrage du texte */
+        font-size: 25px; /* Nouvelle taille de police */
+    }
+
+    #affichage {
+        min-height: auto; /* Hauteur automatique */
+        font-size: 18px; /* Nouvelle taille de police */
+        margin: 10px auto; /* Nouvelles marges */
+        text-align: center;
+    }
+
+    /* Div ListeAlph */
+    .listealph {
+        margin-top: 10px; /* Nouvelle valeur pour margin-top */
+    }
+
+    .listealph button {
+        font-size: 12px; /* Nouvelle taille de police */
+        padding: 8px; /* Nouveau padding */
+    }
+
+    /* Code commun */
+    button {
+        width: auto; /* Largeur automatique */
+        transform: none; /* Annulation de la transformation */
+        box-shadow: none; /* Annulation de l'ombre */
+    }
 }

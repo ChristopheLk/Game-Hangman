@@ -40,19 +40,21 @@ function darkMode(){
     bDark = document.getElementById("DarkMode");
 
     if (bDark.textContent == "Dark Mode"){
-        Background1();
+        DarkToWhite();
     }
-    else(
-        Background2()
-    )
+    else{
+        WhiteToDark()
+    }
 }
 
 /**
  
 My First Background for Dark Mode 
 */
-function Background1(){
-        document.body.style.backgroundColor = ('#4B4453') ;
+function DarkToWhite(){
+    
+        body = document.body;
+        body.className=('bodybg');
 
         white = document.getElementById('trouve');
         white.className = ('white_mode');
@@ -66,14 +68,15 @@ function Background1(){
         tAffichage = document.getElementById("affichage");
         tAffichage.className = ('white_mode');
 
-
-        bDark.innerText="Light Mode";
         bDark.className=('white_bg');
 
         DarkMode = document.querySelectorAll('button');
         DarkMode.forEach(DarkMode => {
             DarkMode.className += (" " + 'button_color');
         });  
+        
+        bDark.innerText="Light Mode";
+        bDark.classList.remove('button_color');
 }
 
 /**
@@ -81,8 +84,9 @@ function Background1(){
 My Second Background for Dark Mode 
 */
 
-function Background2(){
-    document.body.style.backgroundColor = ('#ffff') ;
+function WhiteToDark(){
+    body = document.body;
+    body.classList.remove('bodybg');
 
     white = document.getElementById('trouve');
     white.classList.remove('white_mode');
@@ -99,6 +103,9 @@ function Background2(){
 
     bDark.innerText="Dark Mode";
     bDark.classList.remove('white_bg');
+
+    bDark.innerText="Dark Mode";
+    bDark.className = ('defaultTheme');
 
     DarkMode = document.querySelectorAll('button');
     DarkMode.forEach(DarkMode => {
