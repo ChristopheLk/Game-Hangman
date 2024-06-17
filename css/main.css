@@ -151,7 +151,7 @@ button {
 }
 
 
-/* For screens with min-width of 600px and max-width of 1199px (tablets) */
+/* For screens with min-width of 851px and max-width of 1199px (tablets) */
 @media only screen and (min-width: 851px) and (max-width: 1200px) {
 
     /* Div easter egg */
@@ -296,37 +296,37 @@ button {
     #pendu {
         max-width: 100%; 
         height: auto; 
-        display: block; /* Pour éviter l'espace supplémentaire sous l'image */
-        margin: 0 auto; /* Centrer l'image horizontalement */
-        text-align: center; /* Centrage du texte */
-    }
+        display: block; 
+        margin: 0 auto; 
+        text-align: center; 
 
     #trouve {
-        text-align: center; /* Centrage du texte */
-        font-size: 25px; /* Nouvelle taille de police */
+        text-align: center; 
+        font-size: 25px; 
     }
 
     #affichage {
-        min-height: auto; /* Hauteur automatique */
-        font-size: 18px; /* Nouvelle taille de police */
-        margin: 10px auto; /* Nouvelles marges */
+        min-height: auto;
+        font-size: 18px;
+        margin: 10px auto;
         text-align: center;
     }
 
     /* Div ListeAlph */
     .listealph {
-        margin-top: 10px; /* Nouvelle valeur pour margin-top */
+        margin-top: 10px; 
     }
 
     .listealph button {
-        font-size: 12px; /* Nouvelle taille de police */
-        padding: 8px; /* Nouveau padding */
+        font-size: 12px; 
+        padding: 8px;
     }
 
     /* Code commun */
     button {
-        width: auto; /* Largeur automatique */
-        transform: none; /* Annulation de la transformation */
-        box-shadow: none; /* Annulation de l'ombre */
+        width: auto; 
+        transform: none;
+        box-shadow: none; 
     }
+}
 }
